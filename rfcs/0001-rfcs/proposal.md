@@ -53,7 +53,7 @@ requirements):
 - **Metadata.** Insert a section at the very top of the file, delimited by `---`
   on both sides; include a line reading starting with `author: ` and appending
   your name, and another starting with `date: ` and the current date in ISO format
-  (i.e., `2020-06-10`).
+  (i.e., `2020-06-14`).
 - **Title.** The title should begin with `RFC: ` and include a
   newspaper-headline style capitalized title that is descriptive and concise.
 - **Overview.** The text immediately following the title should provide a very
@@ -108,7 +108,7 @@ makes edits to the RFC materials. It is required in this case to add an
 `updated: ` line to the metadata section, including both a date and a name
 separated by a comma. For example:
 
-   updated: 2021-06-10, Roni Choudhury
+   updated: 2021-06-14, Roni Choudhury
 
 After changes are made and the PR opened, the feedback and acceptance phases are
 the same as detailed above.
