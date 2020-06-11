@@ -81,9 +81,16 @@ supplemental text, or any other material deemed useful.
 When an initial draft of the RFC is complete, push all changes and open a pull
 request at the `multinet-rfcs` repository on GitHub. Copy the title of the RFC
 into the PR title, and put some useful description in the PR description field
-(at a minimum, this can be a copy-paste of the RFC Overview). If you believe
-feedback is particularly useful from specific team members, request their
-reviews explicitly using GitHub's mechanism for doing so.
+(at a minimum, this can be a copy-paste of the RFC Overview). At the bottom of
+the description, place a link to the rendered version of your `proposal.md` file
+using this Markdown template:
+
+```markdown
+[Rendered](https://github.com/multinet-app/multinet-rfcs/blob/rfc/my-awesome-proposal/rfcs/0047-my_awesome_proposal/proposal.md
+```
+
+If you believe feedback is particularly useful from specific team members,
+request their reviews explicitly using GitHub's mechanism for doing so.
 
 The feedback phase can involve threaded discussions on the PR page as well as
 comments on individual lines or blocks of text--much like a regular code review.
