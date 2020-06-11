@@ -3,7 +3,7 @@ author: Roni Choudhury
 date: 2020-06-11
 ---
 
-# View API
+# RFC: View API
 
 This RFC describes a proposal for a Multinet View API. A "view" is essentially a
 virtual table computed by an AQL query running against a workspace. It can be
