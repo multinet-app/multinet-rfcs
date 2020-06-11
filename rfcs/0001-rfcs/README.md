@@ -86,7 +86,7 @@ the description, place a link to the rendered version of your `README.md` file
 using this Markdown template:
 
 ```markdown
-[Rendered](https://github.com/multinet-app/multinet-rfcs/blob/rfc/my-awesome-proposal/rfcs/0047-my_awesome_proposal/README.md
+[Rendered](https://github.com/multinet-app/multinet-rfcs/blob/rfc/my-awesome-proposal/rfcs/0047-my_awesome_proposal)
 ```
 
 If you believe feedback is particularly useful from specific team members,
