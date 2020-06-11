@@ -44,7 +44,7 @@ versions for use in creating execution plans.
 5. Move into your folder: `cd rfcs/0047-my_awesome_proposal`.
 6. Create a `proposal.md` file, and optionally a `README.md` file.
 
-### Writing the RFC in `proposals.md`
+### Writing the RFC in `proposal.md`
 
 The `proposal.md` file will contain the substantive body of the RFC. The
 following parts are required in this document (this RFC itself illustrates these
