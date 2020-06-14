@@ -120,6 +120,36 @@ separated by a comma. For example:
 After changes are made and the PR opened, the feedback and acceptance phases are
 the same as detailed above.
 
+### Rejecting the RFC
+
+If discussions run the other way and consensus is reached that the RFC is not
+acceptable in its current form, the author has three choices:
+
+1. Copy the `README.md` file to `my_awesome_proposal_rejected.md`, add the
+   latter file to version control, then update `README.md` in line with
+   recommendations from the discussion towards a new consensus. The title and
+   overview sections (along with details in the rest of the RFC) may need to
+   be updated, and a link to the "rejected" RFC file should be included in the
+   overview.
+2. Close the pull request, and open a new one with new content. The description
+   for the new pull request must contain a link to the closed pull request.
+3. Close the pull request and take no further action.
+
+Option 1 is suitable for cases where a significant change is required but the
+original format may be useful in the future. For instance, an RFC may be more
+complex than needed in the current moment, but the excess complexity might be
+valuable for a future effort.
+
+Option 2 is suitable for cases in which the RFC is so different from what is
+needed, that there is little connection between the old and new approaches. It
+is especially indicated if the rejected RFC does not hold a lot of promise for
+being needed in the future.
+
+Option 3 is suitable for RFCs that must be abandoned because, e.g., they should
+not have been written in the first place. This option should only be needed
+rarely, since out-of-band discussion usually precedes the actual writing of an
+RFC, mostly preventing unnecessary RFCs from being written in the first place.
+
 ### Use of Singular They
 
 Computer science as a field, both in industry and academia, is
