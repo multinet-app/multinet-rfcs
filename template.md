@@ -11,7 +11,7 @@ Superseded-By: XXXX (not usually required)
 ---
 
 This file provides a sample template for creating your own RFC. See [RFC
-0003](https://github.com/multinet-app/multinet-rfcs/final/0003-rfc-process)
+0003](https://github.com/multinet-app/multinet-rfcs/final/0003-rfc_process)
 for a fuller discussion on how to create and submit an RFC.
 
 Note: if you are reading this via the web, you should first grab [the source of
@@ -31,7 +31,7 @@ Flavored Markdown Spec](https://github.github.com/gfm/).
 Once you've made a copy of this template, remove this explanatory text section,
 fill out the title and metadata above (leaving RFC numbers as `XXXX`), and the
 sections below, then submit the RFC. Follow the [guidelines](guidelines) in [RFC
-0003](https://github.com/multinet-app/multinet-rfcs/final/0003-rfc-process).
+0003](https://github.com/multinet-app/multinet-rfcs/final/0003-rfc_process).
 
 Note that the `Superseded` and `Superseded-By` metadata entries are only needed
 when a new RFC will supersede an existing one (then the new one must say which
