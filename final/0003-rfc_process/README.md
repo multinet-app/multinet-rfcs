@@ -4,7 +4,7 @@ Author: Roni Choudhury
 Status: final
 Created: 2020-06-29
 Last-Modified: 2020-06-29
-Superseded: 0001
+Supersedes: 0001
 ---
 
 # RFC 0003: Adopt Django-esque process for creating RFCs
