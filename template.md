@@ -1,5 +1,3 @@
-# RFC XXXX: RFC Template
-
 ---
 RFC: XXXX
 Author: John Q. Public
@@ -9,6 +7,8 @@ Last-Modified: 2020-06-29
 Supersedes: XXXX (not usually required)
 Superseded-By: XXXX (not usually required)
 ---
+
+# RFC XXXX: RFC Template
 
 This file provides a sample template for creating your own RFC. See [RFC
 0003](https://github.com/multinet-app/multinet-rfcs/final/0003-rfc_process)
@@ -28,24 +28,16 @@ Multinet RFCs), see [Mastering
 Markdown](https://guides.github.com/features/mastering-markdown/) or the [GitHub
 Flavored Markdown Spec](https://github.github.com/gfm/).
 
-Once you've made a copy of this template, remove this explanatory text section,
-fill out the title and metadata above (leaving RFC numbers as `XXXX`), and the
-sections below, then submit the RFC. Follow the [guidelines](guidelines) in [RFC
+Once you've made a copy of this template, replace this overview section with a
+short (~200 word) description of the technical issue being addressed, fill out
+the title and metadata above (leaving RFC numbers as `XXXX`) and the sections
+below, then submit the RFC. Follow the [guidelines](guidelines) in [RFC
 0003](https://github.com/multinet-app/multinet-rfcs/final/0003-rfc_process).
 
 Note that the `Superseded` and `Superseded-By` metadata entries are only needed
 when a new RFC will supersede an existing one (then the new one must say which
 RFC it supersedes, and the superseded one must indicate the new RFC that
 supersedes it).
-
-## Overview
-
-This should be a short (~200 word) description of the technical issue being
-addressed.
-
-This (and the above metadata) is the only section strictly required to submit a
-draft RFC; the following sections can be barebones and fleshed out as you work
-through the DEP process.
 
 ## Motivation
 
