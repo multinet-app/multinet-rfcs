@@ -1,9 +1,15 @@
+# RFC 0003: Adopt Django-esque process for creating RFCs
+
 ---
-author: Roni Choudhury
-date: 2020-06-29
+RFC: 0003
+Author: Roni Choudhury
+Status: final
+Created: 2020-06-29
+Last-Modified: 2020-06-29
+Superseded: 0001
 ---
 
-# RFC: Adopt Django-esque process for creating RFCs
+## Overview
 
 This RFC describes a process for creating RFCs that adapts Django's methodology
 for creating "DEPs" (Django Enhancement Proposals). [Their
