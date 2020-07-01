@@ -93,6 +93,5 @@ calls will fail if the requesting user is not a writer of the workspace, etc.
 
 ## Reference Implementation
 
-[PR #402](https://github.com/multinet-app/multinet-server/pull/402) and [PR #412]
-(https://github.com/multinet-app/multinet-server/pull/412) constitute a
+[PR #402](https://github.com/multinet-app/multinet-server/pull/402) and [PR #412](https://github.com/multinet-app/multinet-server/pull/412) constitute a
 reference implementation for this feature.
