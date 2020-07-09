@@ -48,7 +48,9 @@ value in `package.json`, appended with the first six characters of the current
 commit's Git SHA--for example `multinet-0.47.3-a1c0ef` ([Clause
 9](https://semver.org/#spec-item-9) of the semver spec stipulates that
 prerelease versions can be indicated by appending alphanumeric strings in this
-manner).
+manner). The publishing would be done using an NPM token stored in a GitHub
+secret, arranging the process so that any developer can effectively create
+releases simply by pushing to a branch (or master).
 
 Alternatively, instead of automatically pushing these releases, they could
 instead be done manually via an NPM script. However, this would have the
