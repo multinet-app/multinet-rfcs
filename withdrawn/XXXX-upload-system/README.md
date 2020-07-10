@@ -42,7 +42,7 @@ The `collection` key would point to the ID of the collection to which this docum
 
 Other information could be added to this collection in subsequent RFCs, making this a general purpose collection metadata storage mechanism.
 
-#### Alternative Approach
+#### Alternate Approach
 Instead of modifying the table/network listing endpoints to omit these "hidden" tables, these endpoints could instead be modified to return objects (dictionaries), which along with the table/networks names, would include if they are temporary (i.e. being actively uploaded to). The benefit to this would be that users wouldn't be able to accidentally create duplicate tables of the same name, as they could see all tables which may exist. However, this would allow for any user (who has access to the workspace) to see an in-progress table, which may contain garbage data, and is likely unvalidated. Furthermore, if an upload fails validation after the fact, it may once again disappear from the list of tables/networks, possibly causing more confusion.
 
 ### System-wide Upload Collection
@@ -115,7 +115,7 @@ More than likely, a chunk will not often start/end exactly on the boundary betwe
 
 The approach above assumes that these chunks of data are being sent **in order**. If there is a need for sending these chunks out of order, more logic would be required to keep track of "incomplete" rows/documents, and ensuring that in the future, they are able to be completed properly.
 
-#### Alternative Approach
+#### Alternate Approach
 Another way to handle chunked uploads would be to explicitly split chunks along the boundaries of rows/documents, instead of doing this on arbitrary bytes. This would reduce the logic of chunk processing for each uploader. However, this approach would add increased complexity to, as well as place the burden of data processing on, the client application. Specific processing for each data type would be required, in order to determine the boundaries for each row/document. Furthermore, these rows/documents may be (and in practice often are) individually small, which could increase the overhead of the upload system, decreasing the overall upload speed.
 
 
