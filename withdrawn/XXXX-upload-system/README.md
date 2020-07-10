@@ -1,7 +1,7 @@
 ---
 RFC: XXXX
 Author: Jacob Nesbitt
-Status: draft
+Status: withdrawn
 Created: 2020-07-08
 Last-Modified: 2020-07-08
 ---
