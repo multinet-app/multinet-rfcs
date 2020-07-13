@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0004
 Author: Jacob Nesbitt
 Status: withdrawn
 Created: 2020-07-08
 Last-Modified: 2020-07-08
 ---
 
-# RFC XXXX: Advanced and Robust Upload System
+# RFC 0004: Advanced and Robust Upload System
 
 Uploading a large dataset can be both timeconsuming and problematic. This RFC proposes a method for handling uploads that both facilitates ease of use, as well as reliability and fault tolerance. Uploading data is one of the most important parts of this system, and as such should be robust and featured.
 
