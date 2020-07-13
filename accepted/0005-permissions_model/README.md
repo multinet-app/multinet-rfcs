@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0005
 Author: Roni Choudhury
-Status: draft
+Status: accepted
 Created: 2020-05-22
-Last-Modified: 2020-07-01
+Last-Modified: 2020-07-13
 ---
 
-# RFC XXXX: Multinet Permissions Model
+# RFC 0005: Multinet Permissions Model
 
 This RFC lays out the permissions model used by Multinet. It is a simpler and
 coarser grained model than many systems use, designed to offer a measure of data
