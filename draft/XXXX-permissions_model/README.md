@@ -67,10 +67,12 @@ is thereby authorized to perform on *W*.
 The roles are as follows:
 
 - **Reader**: *U* may **read** and **query** *W*.
-- **Writer**: *U* is a **reader** of *W*, and may also **write** *W*.
-- **Maintainer**: *U* is a **writer** of *W*, and may also **remove** on *W*.
-- **Owner**: *U* is a **maintainer** of *W*, and may also **grant** roles on
-  *W*, **delete** *W*, and *transfer* ownership of *W*.
+- **Writer**: *U* is a **reader** of *W*, and may also **write** and **remove**
+  on *W*.
+- **Maintainer**: *U* is a **writer** of *W*, and may also **grant** roles on
+  *W* and **delete** *W*.
+- **Owner**: *U* is a **maintainer** of *W*, and may also **transfer** ownership
+  of *W*.
 
 All roles originate with **ownership**: when *U* creates a new workspace *W*,
 *U* immediately becomes the **owner** of *W*. *U* may now **grant** roles on W
