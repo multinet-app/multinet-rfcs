@@ -70,9 +70,9 @@ The roles are as follows:
 - **Writer**: *U* is a **reader** of *W*, and may also **write** and **remove**
   on *W*.
 - **Maintainer**: *U* is a **writer** of *W*, and may also **grant** roles on
-  *W* and **delete** *W*.
-- **Owner**: *U* is a **maintainer** of *W*, and may also **transfer** ownership
-  of *W*.
+  *W*.
+- **Owner**: *U* is a **maintainer** of *W*, may **delete** *W* and may also
+  **transfer** ownership of *W*.
 
 All roles originate with **ownership**: when *U* creates a new workspace *W*,
 *U* immediately becomes the **owner** of *W*. *U* may now **grant** roles on W
