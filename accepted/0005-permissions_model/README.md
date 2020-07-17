@@ -3,7 +3,7 @@ RFC: 0005
 Author: Roni Choudhury
 Status: accepted
 Created: 2020-05-22
-Last-Modified: 2020-07-13
+Last-Modified: 2020-07-15
 ---
 
 # RFC 0005: Multinet Permissions Model
@@ -47,6 +47,7 @@ The permissions available in Multinet are as follows:
   create new tables within a workspace, etc.
 - **Remove**: this allows access to DELETE calls on tables, networks, and views
   within a workspace.
+- **Rename**: this allows access to the PUT call that renames a workspace.
 - **Delete**: this allows access to DELETE calls on workspaces themselves.
 - **Grant**: this allows the assigning of roles (other than ownership) on a
   given workspace.
@@ -69,8 +70,8 @@ The roles are as follows:
 - **Reader**: *U* may **read** and **query** *W*.
 - **Writer**: *U* is a **reader** of *W*, and may also **write** and **remove**
   on *W*.
-- **Maintainer**: *U* is a **writer** of *W*, and may also **grant** roles on
-  *W*.
+- **Maintainer**: *U* is a **writer** of *W*, may **rename** *W* and may also
+  **grant** roles on *W*.
 - **Owner**: *U* is a **maintainer** of *W*, may **delete** *W* and may also
   **transfer** ownership of *W*.
 
