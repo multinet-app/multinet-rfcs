@@ -3,7 +3,7 @@ RFC: 0003
 Author: Roni Choudhury
 Status: final
 Created: 2020-06-29
-Last-Modified: 2020-06-29
+Last-Modified: 2020-07-17
 Supersedes: 0001
 ---
 
@@ -48,9 +48,8 @@ The main additions to our process are:
 3. If supplemental materials are needed (this should be generally rare), they
    can go into the new directory alongside the `README.md` file.
 4. The author opens a pull request. The title of the pull request should be the
-   RFC title, and the description should be the overview text from the RFC. The
-   description should end with a hyperlink reading `rendered`, linking to the
-   RFC file itself.
+   RFC title preceded by a prefix of `RFC:`. A PR description is optional, and
+   can generally be omitted if the PR is simply introducing a new RFC.
 5. Reviewers provide feedback, engage in discussion, etc., just as in a normal
    GitHub-based code review.
 6. The RFC becomes "settled". Settlement involves one of several paths of
@@ -121,3 +120,10 @@ procedures.
 3. The pull request should move the superseded RFC directory to the `superseded`
    directory.
 4. Review proceeds as usual.
+
+**Modification.** An accepted or final RFC can be modified after the fact by
+opening a new PR that makes edits or additions. The edits should include an
+update to the `Last-Modified` metadata field. The PR should have a title
+describing the nature of the modification, and the description should describe
+the motivation for doing so. As with any other RFC PR, discussion followed by
+two approvals can lead to a merge.
