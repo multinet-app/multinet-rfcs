@@ -65,22 +65,26 @@ agreed-upon edits).
 1. Two reviewers provide a review approval.
 2. The author provides their "final cut" (that is, their intention to make no
    further updates to the document).
-3. A reviewer or the author determines the RFC number (by ascertaining the
-   highest number in use, and incrementing that).
-4. That person renames the draft directory using the four-digit number in
-   place of the `XXXX` draft prefix.
-5. The person moves the draft directory to the `accepted` top level directory,
+3. A reviewer or the author determines the RFC number (by first ensuring that
+   the PR branch is up-to-date, merging from master if necessary, then examining
+   the top level `next_rfc_number.txt` file).
+4. That person renames the draft directory using the four-digit number in place
+   of the `XXXX` draft prefix.
+5. The person then commits an incrementation of the number in
+   `next_rfc_number.txt`.
+6. The person moves the draft directory to the `accepted` top level directory,
    and merges the pull request.
 
 **Rejection.** The RFC can be rejected if it does not fit into the larger aims
 of the project.
 
 1. Discussion ends with a determination that the RFC should be rejected.
-2. A reviewer or the author determines the RFC number (by ascertaining the
-   highest number in use, and incrementing that).
+2. A reviewer or the author determines the RFC number (consulting
+   `next_rfc_number.txt`).
 3. That person renames the draft directory using the four-digit number in place
    of the `XXXX` draft prefix.
-4. The person moves the draft directory to the `rejected` top level directory,
+4. The person commits an incrementation of the number in `next_rfc_number.txt`.
+5. The person moves the draft directory to the `rejected` top level directory,
    and merges the pull request.
 
 Note that despite **rejecting** the RFC, this procedure **accepts** the pull
