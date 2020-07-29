@@ -55,6 +55,7 @@ releases simply by pushing to a branch (or master).
 Alternatively, instead of automatically pushing these releases, they could
 instead be done manually via an NPM script. However, this would have the
 drawback of requiring distribution of credentials to the different developers.
+GitHub Actions can also be used to trigger such actions manually; see below.
 
 ### Production Releases
 
@@ -71,6 +72,19 @@ requires human intervention to both compute the correct semantic version for a
 given branch, and update it manually in the source. However, this also allows a
 bit of extra control, allowing for *not* updating the version number in order to
 avoid creating a release.
+
+### Manual GitHub Actions via Workflow Dispatch
+
+GitHub Actions includes a
+[workflow_dispatch](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/)
+mechanism that allows for a pushbutton to execute a workflow. We can use this to
+set up several workflows: one for publishing a prelease version from a branch;
+one for publishing release versions from master; and maybe one for deleting (or
+"unpublishing") prerelease versions that were published from merged branches.
+
+This more manual approach would prevent too many prerelease versions from being
+published, while avoiding having to distribute credentials to developers who
+would otherwise want to do such publishing from their local setup.
 
 ### Implementation Notes
 
