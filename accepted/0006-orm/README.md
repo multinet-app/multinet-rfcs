@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0006
 Author: Jacob Nesbitt
 Status: draft
 Created: 2020-07-28
 Last-Modified: 2020-07-28
 ---
 
-# RFC XXXX: Multinet ORM
+# RFC 0006: Multinet ORM
 
 This RFC addresses the issue of organizing database operations into classes which interact with each other. This aims to reduce the complexity, while improving the clarity and extendability of our database operations.
 
