@@ -54,10 +54,8 @@ def node_tables() -> Iterable[Table]: ...
 def edge_table() -> Table: ...
 ```
 
-
 ##### Workspace
 ```
-
 def table(name: str) -> Table: ...
 def tables() -> Iterable[Table]: ...
 
@@ -89,16 +87,5 @@ def create(name: str) -> Workspace: ...
 def exists(name: str) -> bool: ...
 ```
 
-
-### Open Questions
-
-* Should nodes be included in the ORM, or should they remain as dictionaries?
-* Should `create`, `delete`, etc. be attached to the classes they are operating on? This was the original proposal, but after discussion was decided against. The reason it's mentioned here is to highlight the benefit of such a model, mainly:
-  * Methods are more tightly coupled to the classes they are affecting
-  * Methods are spread more evenly between classes, instead of `Workspace` containing the bulk of the operations
-
-  However, the main reason against this approach is that it involves instantiation of objects possibly before they exist, which may be confusing.
-
 ## Backwards Compatibility
-
-Ideally, this change has no effect on the API, as it is focused on changing the way our database operations are structured, not their behavior.
+It is a design goal that this code change not modify the behavior of the API.
