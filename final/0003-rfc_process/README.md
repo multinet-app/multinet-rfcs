@@ -1,7 +1,6 @@
 ---
 RFC: 0003
 Author: Roni Choudhury
-Status: final
 Created: 2020-06-29
 Last-Modified: 2020-07-17
 Supersedes: 0001
