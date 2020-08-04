@@ -1,6 +1,8 @@
 ---
-author: Roni Choudhury
-date: 2020-06-11
+RFC: 0002
+Author: Roni Choudhury
+Created: 2020-06-11
+Last-Modified: 2020-06-11
 ---
 
 # RFC: AQL-Based Table Creation
