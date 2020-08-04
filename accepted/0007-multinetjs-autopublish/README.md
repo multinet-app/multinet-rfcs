@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0007
 Author: Roni Choudhury
 Status: draft
 Created: 2020-07-09
 Last-Modified: 2020-07-09
 ---
 
-# RFC XXXX: Autopublishing for MultinetJS
+# RFC 0007: Autopublishing for MultinetJS
 
 One of the active pieces of software driving the Multinet project is
 `multinetjs`, a TypeScript library providing clientside bindings and utility
