@@ -3,7 +3,7 @@ RFC: 0003
 Author: Roni Choudhury
 Status: final
 Created: 2020-06-29
-Last-Modified: 2020-06-29
+Last-Modified: 2020-07-17
 Supersedes: 0001
 ---
 
@@ -48,9 +48,8 @@ The main additions to our process are:
 3. If supplemental materials are needed (this should be generally rare), they
    can go into the new directory alongside the `README.md` file.
 4. The author opens a pull request. The title of the pull request should be the
-   RFC title, and the description should be the overview text from the RFC. The
-   description should end with a hyperlink reading `rendered`, linking to the
-   RFC file itself.
+   RFC title preceded by a prefix of `RFC:`. A PR description is optional, and
+   can generally be omitted if the PR is simply introducing a new RFC.
 5. Reviewers provide feedback, engage in discussion, etc., just as in a normal
    GitHub-based code review.
 6. The RFC becomes "settled". Settlement involves one of several paths of
@@ -66,22 +65,26 @@ agreed-upon edits).
 1. Two reviewers provide a review approval.
 2. The author provides their "final cut" (that is, their intention to make no
    further updates to the document).
-3. A reviewer or the author determines the RFC number (by ascertaining the
-   highest number in use, and incrementing that).
-4. That person renames the draft directory using the four-digit number in
-   place of the `XXXX` draft prefix.
-5. The person moves the draft directory to the `accepted` top level directory,
+3. A reviewer or the author determines the RFC number (by first ensuring that
+   the PR branch is up-to-date, merging from master if necessary, then examining
+   the top level `next_rfc_number.txt` file).
+4. That person renames the draft directory using the four-digit number in place
+   of the `XXXX` draft prefix.
+5. The person then commits an incrementation of the number in
+   `next_rfc_number.txt`.
+6. The person moves the draft directory to the `accepted` top level directory,
    and merges the pull request.
 
 **Rejection.** The RFC can be rejected if it does not fit into the larger aims
 of the project.
 
 1. Discussion ends with a determination that the RFC should be rejected.
-2. A reviewer or the author determines the RFC number (by ascertaining the
-   highest number in use, and incrementing that).
+2. A reviewer or the author determines the RFC number (consulting
+   `next_rfc_number.txt`).
 3. That person renames the draft directory using the four-digit number in place
    of the `XXXX` draft prefix.
-4. The person moves the draft directory to the `rejected` top level directory,
+4. The person commits an incrementation of the number in `next_rfc_number.txt`.
+5. The person moves the draft directory to the `rejected` top level directory,
    and merges the pull request.
 
 Note that despite **rejecting** the RFC, this procedure **accepts** the pull
@@ -121,3 +124,10 @@ procedures.
 3. The pull request should move the superseded RFC directory to the `superseded`
    directory.
 4. Review proceeds as usual.
+
+**Modification.** An accepted or final RFC can be modified after the fact by
+opening a new PR that makes edits or additions. The edits should include an
+update to the `Last-Modified` metadata field. The PR should have a title
+describing the nature of the modification, and the description should describe
+the motivation for doing so. As with any other RFC PR, discussion followed by
+two approvals can lead to a merge.
