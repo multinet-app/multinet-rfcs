@@ -1,7 +1,6 @@
 ---
 RFC: 0007
 Author: Roni Choudhury
-Status: draft
 Created: 2020-07-09
 Last-Modified: 2020-07-09
 ---
