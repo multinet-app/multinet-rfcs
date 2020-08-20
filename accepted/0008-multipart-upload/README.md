@@ -1,9 +1,8 @@
 ---
-RFC: XXXX
+RFC: 0008
 Author: Roni Choudhury
-Status: draft
 Created: 2020-08-04
-Last-Modified: 2020-08-04
+Last-Modified: 2020-08-19
 ---
 
 # RFC XXXX: Multipart Table Upload
