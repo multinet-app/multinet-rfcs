@@ -1,7 +1,6 @@
 ---
 RFC: 0004
 Author: Jacob Nesbitt
-Status: withdrawn
 Created: 2020-07-08
 Last-Modified: 2020-07-08
 ---

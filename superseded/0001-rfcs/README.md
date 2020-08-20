@@ -1,7 +1,6 @@
 ---
 RFC: 0001
 Author: Roni Choudhury
-Status: superseded
 Created: 2020-06-10
 Last-Modified: 2020-06-10
 Superseded-By: 0003
