@@ -58,7 +58,7 @@ GET /api/workspaces/{workspace}/tables/{table}/metadata
 
 ##### Specifying Metadata on Table Creation
 
-The data model of the API would differ slightly from that of what we store internally, to allow for a single request to describe metadata on multiple entities (mainly in the case of graphs. The data format of this API may resemble the following:
+The data model of the API would differ slightly from that of what we store internally, to allow for a single request to describe metadata on multiple entities (mainly in the case of graphs). The data format of this API may resemble the following:
 
 ```
 {
