@@ -31,7 +31,7 @@ For the other repos, `multinet-server` and `multinetjs`, the considerations are 
 
 There is a potential for some backwards incompatibilities due to the types of the data being changed. Currently, missing data is represented as an empty string; whereas, when we have typed data, the returned value will be `null`. This could impact some of our data processing in the client/vis apps.
 
-## Reference Implementation
+## Implementation Strategies
 
 The client already has logic to calculate the type of the columns but does not allow for missing values as it stands. This implementation should just be an extension of the existing logic.
 
