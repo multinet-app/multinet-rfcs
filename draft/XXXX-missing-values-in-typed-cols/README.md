@@ -9,7 +9,7 @@ Last-Modified: 2020-10-26
 
 As we move to having typed data in Multinet, it is important to handle missing data elegantly, even with typing. Currently, if a column has any amount of missing data, we assume that the data is a "label" type. Since the "label" type is essentially a catch-all for data that we can't provide a meaningful type for, it's important that if there is a semantically meaningful type, we provide it to visualization applications. This must, also, be true in the case where we have mostly complete data with just a few missing rows. Without this information, the client applications cannot adequately choose a visualization for these columns.
 
-There will likely be some client- and server-side considerations for handling missing data. This will include correctly parsing data and when reading it into the ArangoDB types (or we may choose to leave them as strings in the db). Types that we define, will be referenced as semantic types, and native ArangoDB types will be referenced as Arango types
+There will likely be some client- and server-side considerations for handling missing data. This will include correctly parsing data and when reading it into the ArangoDB types (or we may choose to leave them as strings in the db). Types that we define will be referenced as *semantic types*, and native ArangoDB types will be referenced as *Arango types*.
 
 ## Motivation
 
@@ -19,7 +19,7 @@ Since we now need to pass semantic typing into these applications, knowing what 
 
 ## Proposals
 
-We should provide type information for columns that are of one type, but that have missing values. There are at least 3 places that we should support this paradigm:
+Multinet should support typing of columns with missing entries, rather than just assuming such columns are `label` type. There are at least 3 places that we should support this paradigm:
 
 1. `multinet-client` on data preview/type suggestion.
 2. `multinet-server` on data upload and data fetching.
