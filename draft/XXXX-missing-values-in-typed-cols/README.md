@@ -13,9 +13,7 @@ There will likely be some client- and server-side considerations for handling mi
 
 ## Motivation
 
-We now have a motivation to supply data schema information to visualization applications, UpSet. Upset requires set membership information and other data types to generate its visualization. We can also utilize this type information in the other visualization applications that support multinet (MultiLink and MultiMatrix).
-
-Since we now need to pass semantic typing into these applications, knowing what the types are, even if there is missing data, is essential. As such, we'll need to modify our typing logic to handle missing data. This stretches from the frontend, where we provide type suggestions, to the backend, where we store the type information and disseminate it to the vis applications.
+In general, we want to support typed columns for a variety of purposes, including visualization, comparison, grouping, etc. In the real world, datasets almost always have missing entries, and, as such, MultiNet will need to accommodate column typing with missing data. 
 
 ## Proposals
 
