@@ -40,3 +40,5 @@ Jake gave a suggestion for how we might calculate if a column is actually the co
 ```
 const number = entry.number + entry.empty === entry.total;
 ```
+
+When a column has `entry.empty > 0` we could use this to create a flag that is sent with API calls. This would alert whoever is receiving the data that there are missing values in the column. This is of debatable utility, and is something that could be calculated on the client
