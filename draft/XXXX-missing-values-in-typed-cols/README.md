@@ -29,7 +29,7 @@ For the other repos, `multinet-server` and `multinetjs`, the considerations are 
 
 ## Backwards Compatibility
 
-There will be no added backwards incompatibilities from this change. There may be some knock-on consequences for apps that can utilize types in the case that there was data uploaded with the old type definitions, but the impact will be minimal.
+There is a potential for some backwards incompatibilities due to the types of the data being changed. Currently, missing data is represented as an empty string; whereas, when we have typed data, the returned value will be `null`. This could impact some of our data processing in the client/vis apps.
 
 ## Reference Implementation
 
