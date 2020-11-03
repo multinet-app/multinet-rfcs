@@ -16,7 +16,7 @@ The main motivation for this is storing type information for each column in a ta
 
 1. Basic computation/comparison. If we attempt to use these tables for creating graphs and deriving useful data, it's necessary that we store type information, so that we are able to properly compare and compute certain values. For example, if you have a column of numbers, but we store them as strings (the current behavior), then if you try to do comparisons of these column values between different entries, you either will be doing incorrect string comparisons, or will simply not be able to do the comparisons/computations you need to.
 
-2. Providing this information to other applications, so that they do not have to do this data inspection themselves, or if this information is required by those applications. Specifically, [UpSet](https://github.com/VCG/upset) is the first application for which this will be used.
+2. Providing this information to other applications, so that they do not have to do this data inspection themselves, or if this information is required by those applications. Specifically, [UpSet2](https://github.com/visdesignlab/upset2) is the first application for which this will be used.
 
 ## Proposals
 
