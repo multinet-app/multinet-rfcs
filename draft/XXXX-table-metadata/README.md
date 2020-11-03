@@ -48,15 +48,19 @@ There are several way we could go about this, but the cleanest way is to store t
 There are two main operations that are necessary for this functionality.
 
 1. Specifying the metadata on table creation
-2. Retrieving this metadata
+2. Updating this metadata
+3. Retrieving this metadata
 
-Ideally, our API would allow for the creation of a table/graph record, with more versatile options for specifying metadata. However, our API isn't currently structured this way. Instead, in order to conform to our existing API, we would likely just add this metadata object as a query parameter onto each upload endpoint. For retrieving this metadata, the API should resemble the following:
+Ideally, our API would allow for the creation of a table/graph record, with more versatile options for specifying metadata. However, our API isn't currently structured this way. Instead, in order to conform to our existing API, we would likely just add this metadata object as a query parameter onto each upload endpoint. For retrieving and updating this metadata, the API should resemble the following:
 
 ```
 GET /api/workspaces/{workspace}/tables/{table}/metadata
+PUT /api/workspaces/{workspace}/tables/{table}/metadata
 ```
 
-##### Specifying Metadata on Table Creation
+**Note:** Due to the restrictions of our current API, the endpoint used create a table/graph is also used to initially pass along the table/graph metadata, while the `PUT` endpoint above is used for updating this metadata. In the future, this `PUT` action can be used for both initially specifying metadata, and for updating this metadata (that is, as far as the API is concerned, they are the same action).
+
+##### Specifying Metadata on Creation
 
 The data model of the API would differ slightly from that of what we store internally, to allow for a single request to describe metadata on multiple entities (mainly in the case of graphs). The data format of this API may resemble the following:
 
