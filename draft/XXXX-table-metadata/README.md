@@ -21,7 +21,7 @@ The main motivation for this is storing type information for each column in a ta
 ## Proposals
 
 #### Data Model
-There are several ways we could go about this, but in my opinion, the cleanest way is to store this information in a special collection, in the workspace that the table resides in. This special collection would be named something like `multinet_meta`, and each entry would correspond to the metadata on a specific graph or table. I think the data model would look something like this:
+There are several way we could go about this, but the cleanest way is to store this information in a special collection, in the workspace that the table resides in. This special collection would be named something like `multinet_meta`, and each entry would correspond to the metadata on a specific graph or table. The data model would look something like this:
 
 
 ```
