@@ -82,4 +82,4 @@ In this iteration, network metadata will not be implemented.
 
 ## Backwards Compatibility
 
-All changes may be backwards compatible to the server, as this new query parameter would ideally be an "optional" parameter. However, if it's desired that this field be mandatory, then this breaks backwards compatibility for all upload endpoints.
+All changes are backwards compatible, as this new query parameter is optional.
