@@ -45,7 +45,7 @@ There are several way we could go about this, but the cleanest way is to store t
 ```
 
 #### API
-There are two main operations that are necessary for this functionality.
+There are three main operations that are necessary for this functionality.
 
 1. Specifying the metadata on table creation
 2. Updating this metadata
@@ -77,7 +77,7 @@ The data model of the API would differ slightly from that of what we store inter
 }
 ```
 
-However, handling the case of graphs may not be necessary in the first approach. Feedback on how to best implement this is welcome.
+In this iteration, network metadata will not be implemented.
 
 ## Backwards Compatibility
 
