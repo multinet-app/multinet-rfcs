@@ -1,12 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0009
 Author: Jacob Nesbitt
-Status: draft
+Status: accepted
 Created: 2020-10-29
 Last-Modified: 2020-10-29
 ---
 
-# RFC XXXX: Table/Network Metadata
+# RFC 0009: Table/Network Metadata
 
 Currently, Multinet doesn't store any metadata about tables (or networks), chiefly type information. This RFC outlines a way to specify, store and retrieve not just type information, but generalized metadata about a table/network.
 
@@ -39,7 +39,6 @@ There are several ways we could go about this, but the cleanest way is to store 
   network?: {                  // Only present if the major type is "network"
     // TBD
   }
-
 }
 ```
 
