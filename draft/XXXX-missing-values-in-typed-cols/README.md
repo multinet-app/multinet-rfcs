@@ -25,7 +25,9 @@ MultiNet should support typing of columns with missing entries, rather than just
 
 For the type suggester, there is a code chunk in the [Reference Implementation](#reference-implementation) section that suggests a way that we can check for the type of a column, even when data is missing.
 
-For the other repos, `multinet-server` and `multinetjs`, the considerations are slightly different. We'll need to think about how to store and serve data with missing values, and how to disseminate the type information given that there are missing values. Additionally, an open question is, should we tell client applications to expect some missing data in typed columns? This could help when rendering visualizations.
+For storing and disseminating the missing, typed information, we'll lean on the native JSON `null` type. Thus the data will be represented as `null` in both the database and the data that comes from the API.
+
+Additionally, we will not store a count of missing values to share with the client. The client apps will have to figure out which values are missing, and how to handle the values. 
 
 ## Backwards Compatibility
 
@@ -41,4 +43,4 @@ Jake gave a suggestion for how we might calculate if a column is actually the co
 const number = entry.number + entry.empty === entry.total;
 ```
 
-When a column has `entry.empty > 0` we could use this to create a flag that is sent with API calls. This would alert whoever is receiving the data that there are missing values in the column. This is of debatable utility, and is something that could be calculated on the client
+We will not send a flag with API responses that would alert a client application to the fact that there is missing data; instead, the responsibility of determining that there is missing data, and what to do with it, will fall on the client applications.
