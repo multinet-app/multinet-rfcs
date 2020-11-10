@@ -2,7 +2,7 @@
 RFC: XXXX
 Author: Jack Wilburn
 Created: 2020-10-26
-Last-Modified: 2020-10-26
+Last-Modified: 2020-11-10
 ---
 
 # RFC XXXX: Missing Values In Typed Columns
