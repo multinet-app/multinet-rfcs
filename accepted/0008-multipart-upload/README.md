@@ -5,7 +5,7 @@ Created: 2020-08-04
 Last-Modified: 2020-08-19
 ---
 
-# RFC XXXX: Multipart Table Upload
+# RFC 0008: Multipart Table Upload
 
 This RFC describes how large table data can be safely and efficiently uploaded
 to Multinet, using a variation of the common multipart upload strategy common to
