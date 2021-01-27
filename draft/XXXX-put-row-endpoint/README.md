@@ -48,7 +48,7 @@ the `PUT` endpoint to append these tranches to reconstruct the whole table.
 We are proposing to add a new endpoint:
 
 ```
-PUT /api/workspaces/{workspace}/tables/{table}
+PUT /api/workspaces/{workspace}/tables/{table}/rows
 ```
 
 the body of which will contain data formatted as "JSON lines". For each such
