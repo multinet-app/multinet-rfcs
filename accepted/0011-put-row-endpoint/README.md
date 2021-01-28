@@ -1,11 +1,11 @@
 ---
-RFC: XXXX
+RFC: 0011
 Author: Roni Choudhury
 Created: 2021-01-26
 Last-Modified: 2021-01-26
 ---
 
-# RFC XXXX: PUT endpoint for appending/modifying data in a table
+# RFC 0011: PUT endpoint for appending/modifying data in a table
 
 This RFC proposes a new `PUT` endpoint for table data, enabling appending of new
 rows, and modification of rows already in the table.
