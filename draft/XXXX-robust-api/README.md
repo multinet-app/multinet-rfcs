@@ -2,11 +2,10 @@
 RFC: XXXX
 Author: Jacob Nesbitt
 Created: 2020-06-29
-Created: 2020-12-12
 Last-Modified: 2020-12-12
 ---
 
-# RFC XXXX: RFC Template
+# RFC XXXX: Robust Upload System
 
 This RFC outlines a robust way to handle table/graph creation and upload, allowing for arbitrarily large datasets to be uploaded in any of the supported formats.
 
@@ -22,7 +21,7 @@ Currently, our upload system deals with upload, data processing, and table creat
 
 ### Create an upload
 
-`POST /api/workspaces/{workspace}/upload/create`
+`POST /api/workspaces/{workspace}/uploads`
 
 Create an upload, returning an `Upload` object that (among other things) will contain a list of pre-signed URLs, that are to be used for uploading each part of the file to S3. **Note:** This means that the amount of parts / size of each part is determined by the server. The parameters for this call will include the following
 
@@ -95,7 +94,7 @@ Each workspace should contain its own upload collection, which will be used to s
 
 ### Additional Upload Endpoints
 
-`GET /api/workspaces/{workspace}/upload/{id}`
+`GET /api/workspaces/{workspace}/uploads/{id}`
 
 This endpoint returns the Upload document with the corresponding ID.
 
