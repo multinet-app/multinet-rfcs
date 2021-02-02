@@ -25,8 +25,10 @@ Currently, our upload system deals with upload, data processing, and table creat
 
 Create an upload, returning an `Upload` object that (among other things) will contain a list of pre-signed URLs, that are to be used for uploading each part of the file to S3. **Note:** This means that the amount of parts / size of each part is determined by the server. The parameters for this call will include the following
 
-* `dataType` - The data type of the file to upload, which must be one of the supported (or installed, if using a plugin system) data types. E.g. `csv`, `d3_json`, `nested_json`, `newick`, etc. If this parameter does not match one of the supported data types, a `4XX` error is thrown.
 * `size` - The size of the file, in bytes. This is needed to determine the number of pre-signed URLs to create for this upload object.
+* `dataType` - The data type of the file to upload, which must be one of the supported (or installed, if using a plugin system) data types. E.g. `csv`, `d3_json`, `nested_json`, `newick`, etc. If this parameter does not match one of the supported data types, a `4XX` error is thrown.
+* `objectType` - The type of object being uploaded (table or graph).
+* `metadata` - Any metadata that should be associated with the upload
 
 The response will be an upload object, which will have the following structure
 
@@ -45,9 +47,9 @@ The response will be an upload object, which will have the following structure
     "<signed url for second part>",
     ...
   ],
-  "uploadPartTags": [ // This will be an empty list initially
-    "<ETag from the first uploaded part>",
-    "<ETag from the second uploaded part>",
+  "uploadPartTags": [ // Will be populated later
+    null,
+    null,
     ...
   ],
   "metadata": {
@@ -61,28 +63,24 @@ The response will be an upload object, which will have the following structure
 
 ### Upload the individual parts
 
-This is a client side operation, and involves making an HTTP `PUT` request to each URL in the `uploadPartUrls` array. The payload for each of these requests is the section of the file data which corresponds to the index of the signed URL in the array (i.e. if the file is 100MB total, and the `uploadPartUrls` array contains 5 entries, the payload for the first request will be the bytes 1 - 20,000, the payload for the second request will be bytes 20,001 - 40,000, etc.). The response for each `PUT` call is an `ETag`, which must be recorded respective to the part index and used in the finalization call later.
-
-
-### Finalize the upload
-
-`POST /api/workspaces/{workspace}/upload/finalize`
-
-This is the last step that the client is responsible for. This instructs the server to finish the upload. The payload for the request must contain the following:
+This is a client side operation, and involves making an HTTP `PUT` request to each URL in the `uploadPartUrls` array. The payload for each of these requests is the section of the file data which corresponds to the index of the signed URL in the array (i.e. if the file is 100MB total, and the `uploadPartUrls` array contains 5 entries, the payload for the first request will be the bytes 1 - 20,000, the payload for the second request will be bytes 20,001 - 40,000, etc.). The response for each `PUT` call is an `ETag`, which must be used in a subsequent request to convey the status to the server. The structure is shown below.
 
 ```
+POST /api/workspaces/{workspace}/uploads/{id}/finalizePart
+
 {
-  "uploadPartTags": [
-    <ETag returned from the first signed url>,
-    <ETag returned from the second signed url>,
-    ...
-  ]
+  "partNumber": integer,
+  "ETag": string
 }
 ```
 
-**NOTE:** Similar to the `uploadPartUrls` array mentioned in the Upload creation step, the ordering of the `uploadPartTags` array is significant.
+Each request populates its `ETag` field into the `uploadPartTags` field on the upload document, replacing the value of `null` at its index of `partNumber`.
 
-At this point, the sever downloads the reconstructed file from S3, and performs data processing, table/graph creation, etc. with the appropriate processor for that data type. This process doesn't technically need to be done asynchronously, as if the data is small enough it's feasible that this could be completed within the time frame of a single request. However, in the interest of scalability and robustness, this HTTP request should initiate an asynchronous task to process the data.
+### Finalize the upload
+
+`POST /api/workspaces/{workspace}/uploads/{id}/finalize`
+
+This is the last step that the client is responsible for. This instructs the server to mark the upload as finished. At this point, the sever downloads the reconstructed file from S3, and performs data processing, table/graph creation, etc. with the appropriate processor for that data type. This HTTP request should initiate an asynchronous (celery) task to process the data.
 
 ## Additional Changes
 
@@ -98,7 +96,10 @@ Each workspace should contain its own upload collection, which will be used to s
 
 This endpoint returns the Upload document with the corresponding ID.
 
-## Open Questions
+
+`GET /api/user/uploads`
+
+This endpoint returns all in-progress uploads that the user has created. A parameter may be included that will additionally include finished uploads in the response.
 
 ### Changes to data processing procedure
 
@@ -112,29 +113,6 @@ The notion of having various file type "uploaders" will be removed. Instead, the
 
 These errors would likely be stored in the upload model (yet to be outlined), however, it may make sense to introduce another model that would track this status more specifically. Feedback is welcome here.
 
-
-### Tracking upload progress
-
-The current proposal requires that the client upload all parts, and then returns the ETags of these parts all at once when finalizing the upload. However, this poses a couple of possible pitfalls:
-
-1. There is no tracking of upload progress on the server
-2. If it's desired to allow for upload pausing and resuming (assuming the page is totally refreshed and all context is lost, or the computer is changed, etc.), there is no way to do this, as the initially acquired ETags are now lost
-
-This could be addressed by creating endpoints for finalizing an individual part upload, as well as the overall finalize call. In this case, the procedure would then require the client to call some endpoint with the following signature:
-
-```
-POST /api/workspaces/{workspace}/upload/{id}/finalizePart
-
-{
-  "partNumber": integer,
-  "ETag": string
-}
-```
-
-This would add to the `uploadPartTags` array on the upload document, which would allow for tracking the progress of this upload. After all file parts are uploaded, the upload finalize call is made as usual, but in this new approach, it would not contain any payload.
-
-
-Feedback on this suggested feature is appreciated.
 
 ## Backwards Compatibility
 
