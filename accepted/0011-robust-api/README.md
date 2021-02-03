@@ -1,11 +1,11 @@
 ---
-RFC: XXXX
+RFC: 0011
 Author: Jacob Nesbitt
 Created: 2020-12-12
 Last-Modified: 2021-02-01
 ---
 
-# RFC XXXX: Robust Upload System
+# RFC 0011: Robust Upload System
 
 This RFC outlines a robust way to handle table/graph creation and upload, allowing for arbitrarily large datasets to be uploaded in any of the supported formats.
 
