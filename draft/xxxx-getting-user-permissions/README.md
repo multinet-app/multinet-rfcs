@@ -42,7 +42,3 @@ Again, I'm open to feedback on whether this extra step is worth the time to impl
 ## Backwards Compatibility
 
 Since this is a new addition, there should be no breaking changes or incompatibilities.
-
-## Reference Implementation
-
-N/A.
