@@ -22,22 +22,17 @@ read from the workspace without exposing the list of others who have access.
 
 ## Proposals
 
-To satisfy the requirements of this feature, I can conceive of two ways that the work
-might be done. 
+To allow client applications to access a users permissions on a specific workspaces,
+we should add a new endpoint:
 
-1. Modify the existing permissions endpoint, `/api/workspaces/{workspace}/permissions?user=<user>`, to accept a query string parameter to filter the permissions to just the information pertinent to that user.
-2. Add a new endpoint, `/api/user/permission?workspace=<workspace>`, that returns just that users permissions for the workspace.
+`GET /api/user/permission?workspace=<workspace>`
 
-I'd like some suggestions here, since I'm not sure which would be best. I'll
-update this section after a round of review.
-
-The return should list which permission category the user falls into. That should be 
-one of owner, maintainer, writer, reader. If the workspace is public we should return 
-reader for all users except those with explicit permissions. For security reasons,
-we should consider return "workspace not found" if the user doesn't have permissions
-to view that workspace. This would stop a user from guessing valid workspace names,
-in case we ever have a vulnerability allows reading from any valid workspace name.
-Again, I'm open to feedback on whether this extra step is worth the time to implement.
+that returns just that users permissions for the workspace if they have any. For
+public workspaces that a user doesn't have explicit permissions on, that'd be
+reader. For private workspaces that a user doesn't have permission on, a 404 
+Workspace Not Found (for security). Finally, for workspaces where a user has
+explicit permissions (owner, maintainer, writer, reader) return just the permissions
+level that the user has.
 
 ## Backwards Compatibility
 
