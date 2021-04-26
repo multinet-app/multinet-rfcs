@@ -41,15 +41,13 @@ The bulk of this proposal is to write a new RFC that will supersede [RFC
 The process detailed therein would largely be reproduced as-is, with the
 following changes to procedure:
 
-1. While RFCs would still begin life in a dedicated `drafts/` folder, once
-   accepted they will simply be copied to the top-level.
-2. The top-level `template.md` file can be moved to `drafts/`.
-3. The folders `accepted/`, `final/`, `rejected/`, `superseded/`, and
-   `withdrawn` would disappear. `draft/` would be retained for housing draft
-   RFCs as detailed in point 1 above.
-4. All existing RFCs will gain a `Status` metadata field which will inherit the
+1. RFCs would begin life in their final resting place, in the top level
+   directory of the repository.
+2. The folders `accepted/`, `draft/`, `final/`, `rejected/`, `superseded/`, and
+   `withdrawn` would disappear.
+3. All existing RFCs will gain a `Status` metadata field which will inherit the
    disappeared folder name under which they used to live.
-5. The RFC template will gain a metadata field `Status`, set to `draft` by
+4. The RFC template will gain a metadata field `Status`, set to `draft` by
    default, but that must be updated prior to acceptance to the appropriate
    status.
 
