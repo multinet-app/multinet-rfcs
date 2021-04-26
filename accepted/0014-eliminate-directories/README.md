@@ -1,11 +1,11 @@
 ---
-RFC: XXXX
+RFC: 0014
 Author: Roni Choudhury
 Created: 2021-01-26
 Last-Modified: 2021-01-26
 ---
 
-# RFC XXXX: Eliminate directory structure in RFC repository
+# RFC 0014: Eliminate directory structure in RFC repository
 
 This proposes to restructure the RFC repository to eliminate the proposal-status
 focused directory structure. This will simplify the workflow and has a number of
