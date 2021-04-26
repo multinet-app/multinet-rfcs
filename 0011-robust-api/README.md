@@ -3,6 +3,7 @@ RFC: 0011
 Author: Jacob Nesbitt
 Created: 2020-12-12
 Last-Modified: 2021-02-01
+Status: accepted
 ---
 
 # RFC 0011: Robust Upload System

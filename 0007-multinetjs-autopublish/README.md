@@ -3,6 +3,7 @@ RFC: 0007
 Author: Roni Choudhury
 Created: 2020-07-09
 Last-Modified: 2020-07-09
+Status: accepted
 ---
 
 # RFC 0007: Autopublishing for MultinetJS

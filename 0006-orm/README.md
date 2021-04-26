@@ -3,6 +3,7 @@ RFC: 0006
 Author: Jacob Nesbitt
 Created: 2020-07-28
 Last-Modified: 2020-07-30
+Status: accepted
 ---
 
 # RFC 0006: Multinet ORM

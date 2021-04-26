@@ -4,6 +4,7 @@ Author: Roni Choudhury
 Created: 2020-06-10
 Last-Modified: 2020-06-10
 Superseded-By: 0003
+Status: superseded
 ---
 
 # RFC: Process for Creating RFCs

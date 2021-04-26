@@ -3,6 +3,7 @@ RFC: 0004
 Author: Jacob Nesbitt
 Created: 2020-07-08
 Last-Modified: 2020-07-08
+Status: withdrawn
 ---
 
 # RFC 0004: Advanced and Robust Upload System
