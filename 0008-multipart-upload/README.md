@@ -3,6 +3,7 @@ RFC: 0008
 Author: Roni Choudhury
 Created: 2020-08-04
 Last-Modified: 2020-08-19
+Status: accepted
 ---
 
 # RFC 0008: Multipart Table Upload

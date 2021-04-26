@@ -3,6 +3,7 @@ RFC: 0005
 Author: Roni Choudhury
 Created: 2020-05-22
 Last-Modified: 2020-07-15
+Status: accepted
 ---
 
 # RFC 0005: Multinet Permissions Model

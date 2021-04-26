@@ -1,11 +1,12 @@
 ---
-RFC: XXXX
+RFC: 0013
 Author: Jack Wilburn
 Created: 2021-03-10
 Last-Modified: 2021-03-10
+Status: accepted
 ---
 
-# RFC XXXX: Getting User Permissions
+# RFC 0013: Getting User Permissions
 
 ## Motivation
 

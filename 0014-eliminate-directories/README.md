@@ -3,6 +3,7 @@ RFC: 0014
 Author: Roni Choudhury
 Created: 2021-01-26
 Last-Modified: 2021-01-26
+Status: accepted
 ---
 
 # RFC 0014: Eliminate directory structure in RFC repository

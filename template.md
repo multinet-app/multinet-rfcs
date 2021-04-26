@@ -5,6 +5,7 @@ Created: 2020-06-29
 Last-Modified: 2020-06-29
 Supersedes: XXXX (not usually required)
 Superseded-By: XXXX (not usually required)
+Status: draft
 ---
 
 # RFC XXXX: RFC Template

@@ -1,9 +1,9 @@
 ---
 RFC: 0009
 Author: Jacob Nesbitt
-Status: accepted
 Created: 2020-10-29
 Last-Modified: 2020-10-29
+Status: accepted
 ---
 
 # RFC 0009: Table/Network Metadata

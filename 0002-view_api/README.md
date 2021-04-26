@@ -3,6 +3,7 @@ RFC: 0002
 Author: Roni Choudhury
 Created: 2020-06-11
 Last-Modified: 2020-06-11
+Status: accepted
 ---
 
 # RFC: AQL-Based Table Creation
