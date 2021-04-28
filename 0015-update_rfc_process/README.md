@@ -57,10 +57,7 @@ support this streamlined process, leaving little or no friction to writing RFCs.
 RFCs can be settled in several ways.
 
 **Acceptance.** An RFC can be accepted as written (which includes mutually
-agreed-upon edits).
-
-1. Two reviewers provide a review approval.
-2. The author changes the `Status` metadata item to `accepted`.
+agreed-upon edits) with two reviewers providing review approval.
 
 **Rejection.** The RFC can be rejected if it does not fit into the larger aims
 of the project.
